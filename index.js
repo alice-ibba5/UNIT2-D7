@@ -25,7 +25,8 @@ REQUISITI:
 
 
 PARTE 2: 
-Nella pagina HTML, inserisci 2 input di tipo testo (uno per la location e uno per il titolo lavorativo, ricordati di diversificarli con un id) e un bottone con valore “cerca”
+Nella pagina HTML, inserisci 2 input di tipo testo (uno per la location e uno per il titolo lavorativo, ricordati di diversificarli con un id) 
+e un bottone con valore “cerca”
 
 Al click del bottone, il codice deve raccogliere i valori dei due input e darli in pasto alla funzione che hai creato nella parte 1. 
 
@@ -133,7 +134,7 @@ const jobs = [
    
     const titleLower = jobs[i].title.toLowerCase()
     const locationLower = jobs[i].location.toLowerCase()
-    
+
     if (titleLower.includes(titleQuery.toLowerCase()) && locationLower.includes(locationQuery.toLowerCase())) {
 
         result.push(jobs[i])
@@ -150,3 +151,10 @@ const jobs = [
   }
   const data = searchJobs("dev", "us")
   console.log(data)
+
+
+  function onClick() {
+    let search1 = document.getElementById('jobId')
+    let search2 = document.getElementById('locationId')
+
+  }

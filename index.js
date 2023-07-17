@@ -161,7 +161,13 @@ const jobs = [
     const data = searchJobs(search1, search2)
     const ulResults = document.querySelector("#results")
 
-    for (let i = 0; i < data.risultato.length; i++) {
-      const result = data.risultato[i]
+    for (let i = 0; i < data.result.length; i++) {
+      const result = data.result[i]
+      const li = document.createElement('li')
+
+        li.innerHTML = "<div><p>" + result.title + "</p> <p>" + result.location + "</p></div>"
+
+        ulResults.appendChild(li)
     }
+    
   }

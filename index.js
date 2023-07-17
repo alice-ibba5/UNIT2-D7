@@ -152,9 +152,16 @@ const jobs = [
   const data = searchJobs("dev", "us")
   console.log(data)
 
+// 2 parte
 
   function onClick() {
-    let search1 = document.getElementById('jobId')
-    let search2 = document.getElementById('locationId')
+    const search1 = document.getElementById('jobId').value
+    const search2 = document.getElementById('locationId').value
 
+    const data = searchJobs(search1, search2)
+    const ulResults = document.querySelector("#results")
+
+    for (let i = 0; i < data.risultato.length; i++) {
+      const result = data.risultato[i]
+    }
   }
